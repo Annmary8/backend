@@ -7,6 +7,9 @@ from rest_framework import status
 from django.contrib.auth import authenticate
 from api.models import User
 
+from rest_framework import generics
+from api.models import Skill
+from api.serializers import SkillSerializer
 
 
 
@@ -29,3 +32,13 @@ class LoginView(APIView):
                 return Response({"message": "Login successful"})
             return Response({"message": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+class SkillListCreateView(generics.ListCreateAPIView):
+    queryset = Skill.objects.all()
+    serializer_class = SkillSerializer
+
+class SkillRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Skill.objects.all()
+    serializer_class = SkillSerializer
