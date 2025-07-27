@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import User
+from api.models import User,Skill
 
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,8 +19,7 @@ class LoginSerializer(serializers.Serializer):
 
 
 
-from rest_framework import serializers
-from .models import Skill
+
 
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:

@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from api.serializers import RegisterSerializer, LoginSerializer
 from rest_framework import status
 from django.contrib.auth import authenticate
-from api.models import User
+from api.models import User,Skill
 
 from rest_framework import generics
 from api.models import Skill
@@ -42,3 +42,6 @@ class SkillListCreateView(generics.ListCreateAPIView):
 class SkillRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Skill.objects.all()
     serializer_class = SkillSerializer
+
+
+
