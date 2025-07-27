@@ -23,21 +23,6 @@ This is the **Django REST Framework** backend that powers the SkillStack app.
 
 ---
 
-## 📂 Project Structure
-
-SkillStack-Backend/
-├── api/
-│ ├── models.py
-│ ├── views.py
-│ ├── serializers.py
-│ ├── urls.py
-├── skillstack/ # Project settings
-├── db.sqlite3
-├── manage.py
-├── requirements.txt
-
----
-
 ## 🚀 Getting Started
 
 ```bash
