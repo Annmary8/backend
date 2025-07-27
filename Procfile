@@ -1,1 +1,1 @@
-web: gunicorn SkillStack.wsgi
+web: gunicorn backend.wsgi:application
